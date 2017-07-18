@@ -3,32 +3,27 @@ import { connect } from 'react-redux'
 import {fetchUser} from '../actions';
 import Header from '../components/Header';
 
-export class User extends React.Component {
+class User extends React.Component {
    render(){
+     console.log(this.props.user)
      let {user} = this.props;
-     return(
-       <div>{user}</div>
-     )
+     if(user){
+        return(
+        <Header user={user}></Header>
+       )
+     }
+     
+     return <div>Wait...</div>
    }
 
 }
+
 const mapStateToProps = state => {
-  console.log(state.user);
   return {
-    user: state.fetchUser
+    user: state.user
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     onTodoClick: id => {
-//       dispatch(toggleTodo(id))
-//     }
-//   }
-// }
-
-User = connect(
+export default User = connect(
   mapStateToProps
 )(User)
-
-export default User
