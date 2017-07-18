@@ -3,8 +3,8 @@ import fetchUserReducer from './fetchUserReducer';
 import fetchReposReducer from './fetchReposReducer';
 
 const rootReducer = combineReducers({
-   fetchUserReducer,
-   fetchReposReducer
+   fetchUser: fetchUserReducer,
+   fetchRepos:fetchReposReducer
 })
 
 export default rootReducer

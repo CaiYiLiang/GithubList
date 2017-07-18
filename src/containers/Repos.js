@@ -1,22 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class Repos extends React.Component{
-   render(){
-     return(
+// class Repos extends React.Component{
+//    render(){
+//      let {repos} = this.props;
+//      console.log(repos);
+//      return(
+//        <div></div>
+//      )
+//    }
+  
+// }
+
+let Repos = ({repos}) => {
+    console.log(repos);
+    return(
        <div></div>
      )
-   }
-  
 }
+
 
 const mapStateToProps = (state) => {
-  console.log(state.repos);
+  console.log("reposrepos");
+  console.log(state.fetchRepos.repos);
   return {
-    repos: state.repos
+    repos: state.fetchRepos.repos
   }
 }
-
 
 Repos = connect(
   mapStateToProps

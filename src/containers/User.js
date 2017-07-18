@@ -3,24 +3,20 @@ import { connect } from 'react-redux'
 import {fetchUser} from '../actions';
 import Header from '../components/Header';
 
-class User extends React.Component {
-   render(){
-     console.log(this.props.user)
-     let {user} = this.props;
+let User = ({user}) => {
      if(user){
+        console.log(user);
         return(
         <Header user={user}></Header>
        )
      }
      
      return <div>Wait...</div>
-   }
-
 }
 
 const mapStateToProps = state => {
   return {
-    user: state.user
+    user: state.fetchUser.user
   }
 }
 
