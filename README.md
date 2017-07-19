@@ -22,7 +22,7 @@ npm run build
 ```
 <br>
 
-#todo item
+## todo item
 - Extension: Add Input form to search other user's Github List
 - Improve css styling
 <br>
