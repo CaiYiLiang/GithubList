@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import RepoList from '../components/RepoList';
+import {fetchGitRepos} from '../actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -8,8 +9,16 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  fetchGitRepos: (userName) => {
+    dispatch(fetchGitRepos(userName))
+  }
+})
+
+
 let Repos = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(RepoList)
 
 export default Repos

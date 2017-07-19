@@ -49,3 +49,9 @@
 .Header .UserInfo .GithubReposFilter span:hover{
     color:rgba(250, 10, 10, 0.45)
 }
+
+.Loading {
+    text-align: center;
+    margin: 5rem 0;
+
+}

@@ -1,24 +1,13 @@
-import React, { Component } from 'react';
-import {fetchUser,fetchGitRepos} from './actions';
-import { connect } from 'react-redux';
-import './App.css';
+import React from 'react';
 import User from './containers/User';
 import Repos from './containers/Repos';
+import './App.css';
 
-class App extends Component {
-  componentWillMount() {
-    this.props.fetchUser("caiyiliang");
-    this.props.fetchGitRepos("caiyiliang");
-  }
-
-  render() {
-    return (
-      <div className="App">
+const App = () => (
+    <div className="App">
         <User></User>
         <Repos></Repos>
-      </div>
-    );
-  }
-}
+     </div>
+ ) 
 
-export default App = connect(null, {fetchUser,fetchGitRepos})(App);
+export default App;
