@@ -1,10 +1,10 @@
 # Github Repos List
 
 > 用React-Redux实现Github仓库列表<br>
-> A simply webapp built with React + Redux + Redux-observable + flexbox + lodash.
+> A simply webapp built with React + Redux + Redux-Observable + flexbox + lodash.
 <br>
 
-# demo
+## demo
 <img src="./public/GithubListDemo.gif" alt="GithubRepos-List-demo" width="1000px" height="auto">
 <br>
 
@@ -20,6 +20,11 @@ npm run start
 # build for production with minification
 npm run build
 ```
+<br>
+
+## Note
+
+<img src="./public/Note.png" alt="React-Redux-Note" width="600px" height="auto">
 <br>
 
 ## todo item
