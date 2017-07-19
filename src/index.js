@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
-import rootReducer from './reducers'
-import rootEpic from './epics'
+import rootReducer from './reducers';
+import rootEpic from './epics';
 import 'rxjs';
 import App from './App';
 import './index.css';

@@ -1,35 +1,15 @@
-import React from 'react';
 import { connect } from 'react-redux';
-
-// class Repos extends React.Component{
-//    render(){
-//      let {repos} = this.props;
-//      console.log(repos);
-//      return(
-//        <div></div>
-//      )
-//    }
-  
-// }
-
-let Repos = ({repos}) => {
-    console.log(repos);
-    return(
-       <div></div>
-     )
-}
-
+import RepoList from '../components/RepoList';
 
 const mapStateToProps = (state) => {
-  console.log("reposrepos");
-  console.log(state.fetchRepos.repos);
   return {
-    repos: state.fetchRepos.repos
+    repos: state.fetchRepos.repos,
+    filter:state.visibilityFilter
   }
 }
 
-Repos = connect(
+let Repos = connect(
   mapStateToProps
-)(Repos)
+)(RepoList)
 
 export default Repos

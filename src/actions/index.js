@@ -12,3 +12,9 @@ export const FETCH_GITREPOS_FULFILLED = 'FETCH_GITREPOS_FULFILLED';
 
 export const fetchGitRepos = username => ({ type: FETCH_GITREPOS, payload: `${username}/repos` });
 export const fetchGitReposFulfilled = payload => ({ type: FETCH_GITREPOS_FULFILLED, payload });
+
+// Create action for GithubList-Filter
+export const setVisibilityFilter = (filter) => ({
+  type: 'SET_VISIBILITY_FILTER',
+  filter
+})

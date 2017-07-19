@@ -1,0 +1,16 @@
+li {
+    padding: 1px 0;
+    margin-bottom: 2px;
+    color:rgba(81, 79, 79, 0.96);
+}
+
+li:nth-child(even){
+    background: rgba(171, 168, 168, 0.1);
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+li span {
+    margin-left: 0.5rem;
+}

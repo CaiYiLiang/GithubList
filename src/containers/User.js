@@ -1,17 +1,16 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import {fetchUser} from '../actions';
+import React from 'react';
+import { connect } from 'react-redux';
+import { setVisibilityFilter } from '../actions';
 import Header from '../components/Header';
 
-let User = ({user}) => {
+let User = ({user , onClick}) => {
      if(user){
-        console.log(user);
         return(
-        <Header user={user}></Header>
+        <Header user= {user} onClick = {onClick}></Header>
        )
      }
      
-     return <div>Wait...</div>
+     return <div>Loading...</div>
 }
 
 const mapStateToProps = state => {
@@ -20,6 +19,13 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  onClick: (filter) => {
+    dispatch(setVisibilityFilter(filter))
+  }
+})
+
 export default User = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(User)

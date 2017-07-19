@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Fresca');
+
+.Header{
+    display: -webkit-flex;
+    display: flex;
+    justify-content:center;
+    -webkit-justify-content:center;
+    align-items:center;
+    border-bottom: 4px solid rgba(250, 10, 10, 0.45);
+}
+
+.Header > div {
+    display: inline-block;
+}
+
+.Header .UserImg {
+    margin-right: 4rem;
+}
+
+.Header .UserImg img{
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%; 
+    width: 10rem;
+}
+
+
+.Header .UserInfo .Github{
+    margin: 0.2rem auto;
+}
+
+.Header .UserInfo .GithubTimeStamp{
+    font-size: 1rem;
+    font-family: 'Fresca', sans-serif;
+    color:rgba(36, 32, 32, 0.62);
+}
+
+.Header .UserInfo .GithubReposInfo{
+    margin: 0.5rem auto;
+}
+
+.Header .UserInfo .GithubReposFilter span{
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.Header .UserInfo .GithubReposFilter span:hover{
+    color:rgba(250, 10, 10, 0.45)
+}
