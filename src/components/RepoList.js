@@ -11,7 +11,9 @@ export default class RepoList extends Component {
        render() {
          let {repos,filter} = this.props;
           if(repos){
+            // let reposSort = repos.map(repo => _.mapKeys(_.pick(repo,['id','name','fork','html_url','stargazers_count','description']),(value,key)=>key==='id'? 'key':key));
             let reposSort = repos.map(repo => _.pick(repo,['id','name','fork','html_url','stargazers_count','description']));
+            console.log(reposSort);
             let reposFilter = getVisibleRepos(reposSort,filter);
          return (
             <div className="ReposList"> 

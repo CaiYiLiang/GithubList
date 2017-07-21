@@ -10,7 +10,7 @@ export default class Header extends Component {
      render() {
        let {user, onClick} = this.props;
        if(user){
-           const { login, avatar_url, url, public_repos, created_at, updated_at } = user;
+           const { login, avatar_url, html_url, public_repos, created_at, updated_at } = user;
         return (  
          <div className="Header">
          <div className="UserImg">
@@ -19,7 +19,7 @@ export default class Header extends Component {
 
          <div className="UserInfo">
            <div className="Github">
-           <span><GoMarkGithub/> </span><a href={url} target="_blank">{login}</a>
+           <span><GoMarkGithub/> </span><a href={html_url} target="_blank">{login}</a>
          </div>
          <div className="GithubTimeStamp">
          <div>Create : {created_at.slice(0,10)}</div>
